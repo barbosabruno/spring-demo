@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import br.com.alura.forum.modelo.TopicStatus;
-import br.com.alura.forum.modelo.Topic;
+import br.com.alura.forum.model.TopicStatus;
+import br.com.alura.forum.model.Topic;
 import lombok.Getter;
 
 @Getter

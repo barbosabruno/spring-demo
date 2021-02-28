@@ -21,7 +21,7 @@ import br.com.alura.forum.controller.dto.TopicDetailsDto;
 import br.com.alura.forum.controller.dto.TopicDto;
 import br.com.alura.forum.controller.form.UpdateTopicForm;
 import br.com.alura.forum.controller.form.TopicForm;
-import br.com.alura.forum.modelo.Topic;
+import br.com.alura.forum.model.Topic;
 import br.com.alura.forum.repository.CourseRepository;
 import br.com.alura.forum.repository.TopicRepository;
 

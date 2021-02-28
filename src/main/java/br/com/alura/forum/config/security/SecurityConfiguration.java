@@ -22,7 +22,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
             .authorizeRequests()
             .antMatchers(HttpMethod.GET, "/topics").permitAll()
-            .antMatchers(HttpMethod.GET, "/topics/*").permitAll();
+            .antMatchers(HttpMethod.GET, "/topics/*").permitAll()
+            .anyRequest().authenticated()
+            .and().formLogin();
     }
 
     @Override

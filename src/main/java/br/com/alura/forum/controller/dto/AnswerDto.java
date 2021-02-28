@@ -2,7 +2,7 @@ package br.com.alura.forum.controller.dto;
 
 import java.time.LocalDateTime;
 
-import br.com.alura.forum.modelo.Answer;
+import br.com.alura.forum.model.Answer;
 import lombok.Getter;
 
 @Getter

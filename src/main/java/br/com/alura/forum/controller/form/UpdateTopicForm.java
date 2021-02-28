@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
 
-import br.com.alura.forum.modelo.Topic;
+import br.com.alura.forum.model.Topic;
 import br.com.alura.forum.repository.TopicRepository;
 
 @Getter

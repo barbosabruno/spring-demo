@@ -2,7 +2,7 @@ package br.com.alura.forum.controller.dto;
 
 import java.time.LocalDateTime;
 
-import br.com.alura.forum.modelo.Topic;
+import br.com.alura.forum.model.Topic;
 import lombok.Getter;
 import org.springframework.data.domain.Page;
 
