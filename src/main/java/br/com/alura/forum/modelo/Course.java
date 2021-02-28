@@ -2,32 +2,21 @@ package br.com.alura.forum.modelo;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 @Data
-public class Resposta {
+public class Course {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String mensagem;
-	
-	@ManyToOne
-	private Topico topico;
+	private String name;
 
-	private LocalDateTime dataCriacao = LocalDateTime.now();
-
-	@ManyToOne
-	private Usuario autor;
-
-	private Boolean solucao = false;
+	private String category;
 
 }

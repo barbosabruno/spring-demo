@@ -9,13 +9,13 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Usuario {
+public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
+	private String name;
 	private String email;
-	private String senha;
+	private String password;
 
 }

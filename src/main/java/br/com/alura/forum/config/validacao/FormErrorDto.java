@@ -5,9 +5,9 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class ErroDeFormularioDto {
+public class FormErrorDto {
 	
-	private String campo;
-	private String erro;
+	private String field;
+	private String error;
 
 }

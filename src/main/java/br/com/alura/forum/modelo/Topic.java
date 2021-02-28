@@ -19,34 +19,34 @@ import javax.persistence.OneToMany;
 @Entity
 @Data
 @NoArgsConstructor
-public class Topico {
+public class Topic {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String titulo;
+	private String title;
 
-	private String mensagem;
+	private String message;
 
-	private LocalDateTime dataCriacao = LocalDateTime.now();
+	private LocalDateTime createdAt = LocalDateTime.now();
 
 	@Enumerated(EnumType.STRING)
-	private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
+	private TopicStatus status = TopicStatus.NOT_ANSWERED;
 
 	@ManyToOne
-	private Usuario autor;
+	private User author;
 
 	@ManyToOne
-	private Curso curso;
+	private Course course;
 
-	@OneToMany(mappedBy = "topico")
-	private List<Resposta> respostas = new ArrayList<>();
+	@OneToMany(mappedBy = "topic")
+	private List<Answer> answers = new ArrayList<>();
 	
-	public Topico(String titulo, String mensagem, Curso curso) {
-		this.titulo = titulo;
-		this.mensagem = mensagem;
-		this.curso = curso;
+	public Topic(String title, String message, Course course) {
+		this.title = title;
+		this.message = message;
+		this.course = course;
 	}
 
 }
