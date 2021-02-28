@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import br.com.alura.forum.modelo.Topico;
+import lombok.Getter;
 
+@Getter
 public class TopicoDto {
 
 	private Long id;
@@ -18,22 +20,6 @@ public class TopicoDto {
 		this.titulo = topico.getTitulo();
 		this.mensagem = topico.getMensagem();
 		this.dataCriacao = topico.getDataCriacao();
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public String getMensagem() {
-		return mensagem;
-	}
-
-	public LocalDateTime getDataCriacao() {
-		return dataCriacao;
 	}
 
 	public static List<TopicoDto> converter(List<Topico> topicos) {

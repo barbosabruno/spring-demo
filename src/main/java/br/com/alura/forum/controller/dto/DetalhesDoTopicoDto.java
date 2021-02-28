@@ -7,7 +7,9 @@ import java.util.stream.Collectors;
 
 import br.com.alura.forum.modelo.StatusTopico;
 import br.com.alura.forum.modelo.Topico;
+import lombok.Getter;
 
+@Getter
 public class DetalhesDoTopicoDto {
 
 	private Long id;
@@ -27,34 +29,6 @@ public class DetalhesDoTopicoDto {
 		this.status = topico.getStatus();
 		this.respostas = new ArrayList<>();
 		this.respostas.addAll(topico.getRespostas().stream().map(RespostaDto::new).collect(Collectors.toList()));
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public String getMensagem() {
-		return mensagem;
-	}
-
-	public LocalDateTime getDataCriacao() {
-		return dataCriacao;
-	}
-
-	public String getNomeAutor() {
-		return nomeAutor;
-	}
-
-	public StatusTopico getStatus() {
-		return status;
-	}
-
-	public List<RespostaDto> getRespostas() {
-		return respostas;
 	}
 	
 }
