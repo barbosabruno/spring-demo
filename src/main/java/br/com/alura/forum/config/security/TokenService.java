@@ -22,14 +22,23 @@ public class TokenService {
 
         final User loggedUser = (User) authentication.getPrincipal();
         final Date today = new Date();
-        final Date expirationDate = new Date(today.getTime() + Long.parseLong(expiration));
+        final Date expirationDate = new Date(today.getTime() + Long.parseLong(this.expiration));
 
         return Jwts.builder()
                 .setIssuer("MY_APP")
                 .setSubject(String.valueOf(loggedUser.getId()))
                 .setIssuedAt(today)
                 .setExpiration(expirationDate)
-                .signWith(SignatureAlgorithm.HS256, secret)
+                .signWith(SignatureAlgorithm.HS256, this.secret)
                 .compact();
+    }
+
+    public boolean isValidToken(String token) {
+        try {
+            Jwts.parser().setSigningKey(this.secret).parseClaimsJws(token);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
