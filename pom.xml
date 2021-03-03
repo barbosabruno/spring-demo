@@ -71,6 +71,7 @@
     </dependencies>
 
 	<build>
+		<finalName>forum-demo</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
