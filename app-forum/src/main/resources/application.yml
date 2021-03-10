@@ -21,6 +21,12 @@ spring:
       enabled: true
       path: /h2-console
 
+# spring boot admin
+  boot:
+    admin:
+      client:
+        url: http://localhost:8081
+
 # jwt
 forum:
   jwt:
